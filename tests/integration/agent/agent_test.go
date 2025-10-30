@@ -16,7 +16,7 @@ kind: Agent
 metadata:
   name: test-agent
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent for unit tests"
   model: gpt-4
   tools:
