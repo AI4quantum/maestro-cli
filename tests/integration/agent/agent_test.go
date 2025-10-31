@@ -16,7 +16,7 @@ kind: Agent
 metadata:
   name: test-agent
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent for unit tests"
   model: gpt-4
   tools:
@@ -141,7 +141,7 @@ kind: Agent
 metadata:
   name: test-agent
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent for unit tests"
   model: gpt-4
   tools:
@@ -181,7 +181,7 @@ kind: Agent
 metadata:
   name: test-agent
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent for unit tests"
   model: gpt-4
   tools:
@@ -221,7 +221,7 @@ kind: Agent
 metadata:
   name: test-agent-1
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent 1"
   model: gpt-4
 ---
@@ -230,7 +230,7 @@ kind: Agent
 metadata:
   name: test-agent-2
 spec:
-  framework: fastapi
+  framework: openai
   description: "Test agent 2"
   model: gpt-4
 `
@@ -284,7 +284,7 @@ kind: Agent
 metadata:
   name: test-agent
 spec:
-  framework: "fastapi
+  framework: "openai
   description: "Test agent with invalid YAML"
   model: gpt-4
 `
