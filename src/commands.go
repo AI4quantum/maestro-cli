@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"maestro/internal/common"
 	"maestro/internal/commands"
+	"maestro/internal/common"
 )
 
 // VDB Commands
@@ -402,13 +402,13 @@ var deprecatedCreateCmd = &cobra.Command{
 	Short:   "*** Deprecated *** Create",
 	Long:    `*** Deprecated *** Create: Use agent or tool create.`,
 	Aliases: []string{"create"},
-	Args: cobra.ExactArgs(1),
+	Args:    cobra.ExactArgs(1),
 	Example: `  maestro agent/tool create yaml_file.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("***Deprecated Create: Use agent or tool create.***")
 		defs, _ := common.ParseYAML(args[0])
 		fmt.Println(defs[0]["kind"])
-		if defs[0]["kind"] == "Agent" || defs[0]["kind"] == "MCPTool"{
+		if defs[0]["kind"] == "Agent" || defs[0]["kind"] == "MCPTool" {
 			options := commands.NewCommandOptions(cmd)
 			return commands.DeprecatedCreateCommand(args[0], options)
 		}
@@ -422,7 +422,7 @@ var deprecatedCreateCrCmd = &cobra.Command{
 	Short:   "*** Deprecated *** Create-cr",
 	Long:    `*** Deprecated *** Create-cr: Use curomresource create yaml_file.`,
 	Aliases: []string{"create"},
-	Args: cobra.ExactArgs(1),
+	Args:    cobra.ExactArgs(1),
 	Example: `  maestro agent/tool create-cr yaml_file.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("***Deprecated Create: Use agent or tool create.***")
@@ -451,7 +451,7 @@ var deprecatedDeployCmd = &cobra.Command{
 	Short:   "*** Deprecated *** Deploy",
 	Long:    `*** Deprecated *** Deploy: Use workflow deploy.`,
 	Aliases: []string{"deploy"},
-	Args:  cobra.MinimumNArgs(2),
+	Args:    cobra.MinimumNArgs(2),
 	Example: `  maestro deploy agentyaml_file workflowyaml_file.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("***Deprecated Deploy: Use workflow deploy.***")
@@ -466,7 +466,7 @@ var deprecatedServeCmd = &cobra.Command{
 	Short:   "*** Deprecated *** Serve",
 	Long:    `*** Deprecated *** : Use workflow/agent serve.`,
 	Aliases: []string{"serve"},
-	Args: cobra.ExactArgs(1),
+	Args:    cobra.ExactArgs(1),
 	Example: `  maestro serve agentyaml_file.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("***Deprecated Serve: Use workflow serve.***")
