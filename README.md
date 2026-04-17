@@ -1,3 +1,8 @@
+> ⚠️ **Archived Repository**
+>
+> This project is no longer maintained and has been archived as of April 2026.
+> - No new features or bug fixes will be accepted.
+
 # Maestro CLI
 
 A command-line interface for managing vector databases and their resources with support for YAML configuration and environment variable substitution.
